@@ -1,0 +1,17 @@
+name1=list(input())
+name2=list(input())
+print(''.join(name1+name2))
+temp=[]
+for char in name1:
+  if char in name2:
+    name2.remove(char)
+  else:
+    temp.append(char)
+print (''.join(temp+name2),end="=")
+uncommon_chars=len(temp+name2)
+print (uncommon_chars)
+F=['F','L','A','M','E','S']
+for i in range(len(F)-1):
+    t=uncommon_chars%len(F)
+    F.remove(F[t-1])
+print(F)
